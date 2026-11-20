@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		067FFB0A8CEBF5710493B0FB /* MonthlyOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A311F74F5028B8B0AC8458 /* MonthlyOverviewView.swift */; };
+		0B6207D20CF3F9FB5392FA95 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D1601838C07C3CFC7B47B0 /* NotificationManager.swift */; };
+		1DF743061DF700CFFEE8CF5D /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C9A66BB0B80E1951ABF35C /* AchievementsView.swift */; };
+		28CC3F2FB1E629D152BD2328 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73EB83A519624F939EEAAFC6 /* Assets.xcassets */; };
+		2E0105E4AD63DC90861A38CE /* ArticleCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A1B38CFDC8EA03B9ADAEE8 /* ArticleCatalog.swift */; };
+		319C955C6537F2B71CC98BF7 /* HealthEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2BC77AB8902D2FD5A61FBA /* HealthEngine.swift */; };
+		31D6BD2763476900FFC41A89 /* AchievementCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0B30D8254C282336CA6D43 /* AchievementCatalog.swift */; };
+		33CFFFAA2D01FAC011CC714B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3A9D44B0AF2330E469499 /* HistoryView.swift */; };
+		3E5B7A95A7FF46443358F801 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE1DC3FDEBF4000931D1666 /* HomeView.swift */; };
+		3FE183E842CA238902EAD1C6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B065C8EEF0C0ED40328014A9 /* Models.swift */; };
+		49C502CCF15893E838C72B4C /* JourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB94527C43378D9F57AF8EC /* JourneyView.swift */; };
+		4DE2D37E0007CD3831F128A7 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E60CF487B8A0764F7EBC38C /* AppRouter.swift */; };
+		5D0B57F4AACC786CD39E6EFA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68A8122512B6D62CCEF94D /* Theme.swift */; };
+		645D2B9D31F0D5B61CC03C26 /* HearticaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60251F5046ED5C1ACBAC793 /* HearticaApp.swift */; };
+		6FB32AB1571F2CE51D7AB55C /* MeasurementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53726516E742B48B244E70A /* MeasurementDetailView.swift */; };
+		70A09DD9BBDDBA8C7B01F5BD /* PostOnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7052D99408AA8F930EE79B6C /* PostOnboardingFlow.swift */; };
+		7988496B44098E80DC0A88CC /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F71349FB75BA6FD2FF9C2 /* PaywallView.swift */; };
+		7E14F8AD063134706E08C486 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED948C483E785BE84A432E8B /* AppStore.swift */; };
+		840433C83860CB606F5C1946 /* MeasureFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B3DC61681F9282EBBEF09A /* MeasureFlowView.swift */; };
+		9CD5A1FA3B47CB45058F758D /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = F018146669340026C57FCBDA /* Components.swift */; };
+		9ECC702F07EBFEB47A60111C /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053C51D877D7C0A0D42D243 /* RemindersView.swift */; };
+		A04F65807CB8CECC2237F021 /* PPGCameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A706A6D0A50B829CF39E5AB /* PPGCameraService.swift */; };
+		A2D5A29ADC4514F8970D8DF2 /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DD0E90046448461E14B84 /* OnboardingFlow.swift */; };
+		A8F5D96AE378A4C1DF907994 /* HearticaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3C8FD267DB45A9AFBD6C60 /* HearticaTests.swift */; };
+		ABC847B253A13B1A582B9287 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BD3CE433E34272F4E4CF2 /* RootView.swift */; };
+		ACCBA06F28FE3E1BB1B1679B /* ManualLogViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A224303A01605A114BA0F1 /* ManualLogViews.swift */; };
+		B37B723A738A53F44A22A215 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052AC19A11D0DC99B83EB378 /* DashboardView.swift */; };
+		C6F6D317F5B9BAF38AAE4D09 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D82DE175C301D00712F1EC /* SettingsView.swift */; };
+		D48FFBB6D4BD2E118AFC06F6 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0920F15FB8718FACAA7EA20 /* Catalog.swift */; };
+		D4ACD6401DF74FBA5EAC0632 /* AppleHealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E377896BE8FEDB7DB7D482BD /* AppleHealthView.swift */; };
+		D4F89B28530767302C2AB58E /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F15EB932D7630469FE6A3A /* MeView.swift */; };
+		E32089CF13E0BE462D60DBBE /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69C3E87E6D1A103BFD65001 /* InsightsView.swift */; };
+		F747CDD07DF3654C5815C4F2 /* JourneyCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687506865EBD7A3E37321B50 /* JourneyCatalog.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7CCBD7B101A4127A9F9FF60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE14C83ED3BCE4452AAF3D62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 466CBAB8C56A49EE6637E9AB;
+			remoteInfo = Heartica;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02B3DC61681F9282EBBEF09A /* MeasureFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureFlowView.swift; sourceTree = "<group>"; };
+		052AC19A11D0DC99B83EB378 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		0D2BC77AB8902D2FD5A61FBA /* HealthEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthEngine.swift; sourceTree = "<group>"; };
+		0F68A8122512B6D62CCEF94D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		2C3BD3CE433E34272F4E4CF2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		3053C51D877D7C0A0D42D243 /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
+		31F15EB932D7630469FE6A3A /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		394E2467750219E5ED0B95BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3AB94527C43378D9F57AF8EC /* JourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyView.swift; sourceTree = "<group>"; };
+		4E5DD0E90046448461E14B84 /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
+		54B8E93D7B1DA720133C86DE /* Heartica.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Heartica.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		687506865EBD7A3E37321B50 /* JourneyCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyCatalog.swift; sourceTree = "<group>"; };
+		6EE1DC3FDEBF4000931D1666 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7052D99408AA8F930EE79B6C /* PostOnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOnboardingFlow.swift; sourceTree = "<group>"; };
+		710F71349FB75BA6FD2FF9C2 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		73EB83A519624F939EEAAFC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E60CF487B8A0764F7EBC38C /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		9A706A6D0A50B829CF39E5AB /* PPGCameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPGCameraService.swift; sourceTree = "<group>"; };
+		A53726516E742B48B244E70A /* MeasurementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementDetailView.swift; sourceTree = "<group>"; };
+		A60251F5046ED5C1ACBAC793 /* HearticaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearticaApp.swift; sourceTree = "<group>"; };
+		A8A1B38CFDC8EA03B9ADAEE8 /* ArticleCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCatalog.swift; sourceTree = "<group>"; };
+		AEE3A9D44B0AF2330E469499 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		B065C8EEF0C0ED40328014A9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B0920F15FB8718FACAA7EA20 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		B2A224303A01605A114BA0F1 /* ManualLogViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualLogViews.swift; sourceTree = "<group>"; };
+		B8D1601838C07C3CFC7B47B0 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		C69C3E87E6D1A103BFD65001 /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
+		C6D82DE175C301D00712F1EC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D2C9A66BB0B80E1951ABF35C /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		DF3C8FD267DB45A9AFBD6C60 /* HearticaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearticaTests.swift; sourceTree = "<group>"; };
+		E0A311F74F5028B8B0AC8458 /* MonthlyOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyOverviewView.swift; sourceTree = "<group>"; };
+		E377896BE8FEDB7DB7D482BD /* AppleHealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleHealthView.swift; sourceTree = "<group>"; };
+		ED948C483E785BE84A432E8B /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		EF0B30D8254C282336CA6D43 /* AchievementCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCatalog.swift; sourceTree = "<group>"; };
+		F018146669340026C57FCBDA /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		FEA2D89CCF68E0B5134C3699 /* HearticaTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HearticaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		164CCFC49901F23333204C1D /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				D2C9A66BB0B80E1951ABF35C /* AchievementsView.swift */,
+				E377896BE8FEDB7DB7D482BD /* AppleHealthView.swift */,
+				31F15EB932D7630469FE6A3A /* MeView.swift */,
+				710F71349FB75BA6FD2FF9C2 /* PaywallView.swift */,
+				3053C51D877D7C0A0D42D243 /* RemindersView.swift */,
+				C6D82DE175C301D00712F1EC /* SettingsView.swift */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		1A5ADB7882D3360D5C189A91 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF0B30D8254C282336CA6D43 /* AchievementCatalog.swift */,
+				ED948C483E785BE84A432E8B /* AppStore.swift */,
+				A8A1B38CFDC8EA03B9ADAEE8 /* ArticleCatalog.swift */,
+				B0920F15FB8718FACAA7EA20 /* Catalog.swift */,
+				687506865EBD7A3E37321B50 /* JourneyCatalog.swift */,
+				B065C8EEF0C0ED40328014A9 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1CCDF9E6953E0293EC07E429 /* Measure */ = {
+			isa = PBXGroup;
+			children = (
+				02B3DC61681F9282EBBEF09A /* MeasureFlowView.swift */,
+				A53726516E742B48B244E70A /* MeasurementDetailView.swift */,
+				9A706A6D0A50B829CF39E5AB /* PPGCameraService.swift */,
+			);
+			path = Measure;
+			sourceTree = "<group>";
+		};
+		1F9E19F49BAAB33D6B78159B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54B8E93D7B1DA720133C86DE /* Heartica.app */,
+				FEA2D89CCF68E0B5134C3699 /* HearticaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2FC97CA6A41A0F5BF23BB69F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E52E3E5E399F7A3388E0503C /* Dashboard */,
+				BCEB5DE06379608F536BE01C /* History */,
+				4FE17BE3F83274ACCD4C6422 /* Home */,
+				DE2FB2FB0A1731FB5CFAB012 /* Insights */,
+				8076C79C2754DAB64549AFAD /* Journey */,
+				164CCFC49901F23333204C1D /* Me */,
+				1CCDF9E6953E0293EC07E429 /* Measure */,
+				E9B92C7EA140B0EFD3F2BC62 /* Onboarding */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4FE17BE3F83274ACCD4C6422 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6EE1DC3FDEBF4000931D1666 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		522ECE73E15B808D612AA81B /* HearticaTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF3C8FD267DB45A9AFBD6C60 /* HearticaTests.swift */,
+			);
+			path = HearticaTests;
+			sourceTree = "<group>";
+		};
+		8076C79C2754DAB64549AFAD /* Journey */ = {
+			isa = PBXGroup;
+			children = (
+				3AB94527C43378D9F57AF8EC /* JourneyView.swift */,
+			);
+			path = Journey;
+			sourceTree = "<group>";
+		};
+		8BA1D6EEC9AB721E004E9F07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				73EB83A519624F939EEAAFC6 /* Assets.xcassets */,
+				394E2467750219E5ED0B95BB /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9BEBC66C6857D7BDEA2F3F1A /* Heartica */ = {
+			isa = PBXGroup;
+			children = (
+				FBE733FE848314AE7E412013 /* App */,
+				B7E016AD50805D041F212AE0 /* Components */,
+				2FC97CA6A41A0F5BF23BB69F /* Features */,
+				1A5ADB7882D3360D5C189A91 /* Models */,
+				8BA1D6EEC9AB721E004E9F07 /* Resources */,
+				D1B7789D8502DC113D128233 /* Services */,
+			);
+			path = Heartica;
+			sourceTree = "<group>";
+		};
+		B7E016AD50805D041F212AE0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F018146669340026C57FCBDA /* Components.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BCEB5DE06379608F536BE01C /* History */ = {
+			isa = PBXGroup;
+			children = (
+				AEE3A9D44B0AF2330E469499 /* HistoryView.swift */,
+				B2A224303A01605A114BA0F1 /* ManualLogViews.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		D1B7789D8502DC113D128233 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0D2BC77AB8902D2FD5A61FBA /* HealthEngine.swift */,
+				B8D1601838C07C3CFC7B47B0 /* NotificationManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DE2FB2FB0A1731FB5CFAB012 /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				C69C3E87E6D1A103BFD65001 /* InsightsView.swift */,
+			);
+			path = Insights;
+			sourceTree = "<group>";
+		};
+		E29A57704F3A95389C48E5D1 = {
+			isa = PBXGroup;
+			children = (
+				9BEBC66C6857D7BDEA2F3F1A /* Heartica */,
+				522ECE73E15B808D612AA81B /* HearticaTests */,
+				1F9E19F49BAAB33D6B78159B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E52E3E5E399F7A3388E0503C /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				052AC19A11D0DC99B83EB378 /* DashboardView.swift */,
+				E0A311F74F5028B8B0AC8458 /* MonthlyOverviewView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		E9B92C7EA140B0EFD3F2BC62 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4E5DD0E90046448461E14B84 /* OnboardingFlow.swift */,
+				7052D99408AA8F930EE79B6C /* PostOnboardingFlow.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FBE733FE848314AE7E412013 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7E60CF487B8A0764F7EBC38C /* AppRouter.swift */,
+				A60251F5046ED5C1ACBAC793 /* HearticaApp.swift */,
+				2C3BD3CE433E34272F4E4CF2 /* RootView.swift */,
+				0F68A8122512B6D62CCEF94D /* Theme.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		466CBAB8C56A49EE6637E9AB /* Heartica */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 110162962DEE5465922002F6 /* Build configuration list for PBXNativeTarget "Heartica" */;
+			buildPhases = (
+				7F78A2D4B8C61DF3C89E0037 /* Sources */,
+				2A94DBDDCA65293193392E97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Heartica;
+			packageProductDependencies = (
+			);
+			productName = Heartica;
+			productReference = 54B8E93D7B1DA720133C86DE /* Heartica.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95D798B425860AB0FB9C8F1D /* HearticaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB52947607D9FCD6D1989C /* Build configuration list for PBXNativeTarget "HearticaTests" */;
+			buildPhases = (
+				97785A7DDC6F9FA8B8E2EDE6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1292DDF79A9D0CA5E3843FDE /* PBXTargetDependency */,
+			);
+			name = HearticaTests;
+			packageProductDependencies = (
+			);
+			productName = HearticaTests;
+			productReference = FEA2D89CCF68E0B5134C3699 /* HearticaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE14C83ED3BCE4452AAF3D62 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					466CBAB8C56A49EE6637E9AB = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					95D798B425860AB0FB9C8F1D = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 232B1775775ABEAEB1313A9B /* Build configuration list for PBXProject "Heartica" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E29A57704F3A95389C48E5D1;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1F9E19F49BAAB33D6B78159B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				466CBAB8C56A49EE6637E9AB /* Heartica */,
+				95D798B425860AB0FB9C8F1D /* HearticaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A94DBDDCA65293193392E97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28CC3F2FB1E629D152BD2328 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F78A2D4B8C61DF3C89E0037 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31D6BD2763476900FFC41A89 /* AchievementCatalog.swift in Sources */,
+				1DF743061DF700CFFEE8CF5D /* AchievementsView.swift in Sources */,
+				4DE2D37E0007CD3831F128A7 /* AppRouter.swift in Sources */,
+				7E14F8AD063134706E08C486 /* AppStore.swift in Sources */,
+				D4ACD6401DF74FBA5EAC0632 /* AppleHealthView.swift in Sources */,
+				2E0105E4AD63DC90861A38CE /* ArticleCatalog.swift in Sources */,
+				D48FFBB6D4BD2E118AFC06F6 /* Catalog.swift in Sources */,
+				9CD5A1FA3B47CB45058F758D /* Components.swift in Sources */,
+				B37B723A738A53F44A22A215 /* DashboardView.swift in Sources */,
+				319C955C6537F2B71CC98BF7 /* HealthEngine.swift in Sources */,
+				645D2B9D31F0D5B61CC03C26 /* HearticaApp.swift in Sources */,
+				33CFFFAA2D01FAC011CC714B /* HistoryView.swift in Sources */,
+				3E5B7A95A7FF46443358F801 /* HomeView.swift in Sources */,
+				E32089CF13E0BE462D60DBBE /* InsightsView.swift in Sources */,
+				F747CDD07DF3654C5815C4F2 /* JourneyCatalog.swift in Sources */,
+				49C502CCF15893E838C72B4C /* JourneyView.swift in Sources */,
+				ACCBA06F28FE3E1BB1B1679B /* ManualLogViews.swift in Sources */,
+				D4F89B28530767302C2AB58E /* MeView.swift in Sources */,
+				840433C83860CB606F5C1946 /* MeasureFlowView.swift in Sources */,
+				6FB32AB1571F2CE51D7AB55C /* MeasurementDetailView.swift in Sources */,
+				3FE183E842CA238902EAD1C6 /* Models.swift in Sources */,
+				067FFB0A8CEBF5710493B0FB /* MonthlyOverviewView.swift in Sources */,
+				0B6207D20CF3F9FB5392FA95 /* NotificationManager.swift in Sources */,
+				A2D5A29ADC4514F8970D8DF2 /* OnboardingFlow.swift in Sources */,
+				A04F65807CB8CECC2237F021 /* PPGCameraService.swift in Sources */,
+				7988496B44098E80DC0A88CC /* PaywallView.swift in Sources */,
+				70A09DD9BBDDBA8C7B01F5BD /* PostOnboardingFlow.swift in Sources */,
+				9ECC702F07EBFEB47A60111C /* RemindersView.swift in Sources */,
+				ABC847B253A13B1A582B9287 /* RootView.swift in Sources */,
+				C6F6D317F5B9BAF38AAE4D09 /* SettingsView.swift in Sources */,
+				5D0B57F4AACC786CD39E6EFA /* Theme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97785A7DDC6F9FA8B8E2EDE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8F5D96AE378A4C1DF907994 /* HearticaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1292DDF79A9D0CA5E3843FDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 466CBAB8C56A49EE6637E9AB /* Heartica */;
+			targetProxy = A7CCBD7B101A4127A9F9FF60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4AF043300ADF559729A49DD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverdawn.frostyhill.myst.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heartica.app/Heartica";
+			};
+			name = Debug;
+		};
+		4C22E3809E95DE9D66C4E91E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 582;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		51E4FA00925B166FAA17D031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 582;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8AF46B7C3631DA5D9524D073 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Heartica/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverdawn.frostyhill.myst;
+				PRODUCT_NAME = Heartica;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99F6C5ABF09C88B26CE23154 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Heartica/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverdawn.frostyhill.myst;
+				PRODUCT_NAME = Heartica;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E097D055B8C69A963122FFF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverdawn.frostyhill.myst.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Heartica.app/Heartica";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		110162962DEE5465922002F6 /* Build configuration list for PBXNativeTarget "Heartica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AF46B7C3631DA5D9524D073 /* Debug */,
+				99F6C5ABF09C88B26CE23154 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1DEB52947607D9FCD6D1989C /* Build configuration list for PBXNativeTarget "HearticaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AF043300ADF559729A49DD0 /* Debug */,
+				E097D055B8C69A963122FFF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		232B1775775ABEAEB1313A9B /* Build configuration list for PBXProject "Heartica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C22E3809E95DE9D66C4E91E /* Debug */,
+				51E4FA00925B166FAA17D031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE14C83ED3BCE4452AAF3D62 /* Project object */;
+}
