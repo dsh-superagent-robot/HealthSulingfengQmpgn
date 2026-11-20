@@ -98,7 +98,7 @@ struct MeasureFlowView: View {
 
     private var topBar: some View {
         HStack {
-            IconButton(systemName: "xmark", size: 38) {
+            IconButton(systemName: "xmark", size: 38, identifier: "measure.close") {
                 if phase == .measuring {
                     showExitConfirm = true
                 } else {
@@ -148,6 +148,7 @@ struct MeasureFlowView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 }
                 .buttonStyle(.plain)
+                .accessibilityIdentifier("measure.mode.\(item.rawValue)")
             }
         }
         .padding(4)

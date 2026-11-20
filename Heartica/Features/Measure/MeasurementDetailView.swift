@@ -433,6 +433,7 @@ struct MeasurementDetailView: View {
                     Text("Continue")
                 }
                 .buttonStyle(PrimaryButtonStyle())
+                .accessibilityIdentifier("result.continue")
                 Button {
                     if let onRetake {
                         onRetake()
@@ -443,6 +444,7 @@ struct MeasurementDetailView: View {
                     Text("Retake")
                 }
                 .buttonStyle(SoftButtonStyle())
+                .accessibilityIdentifier("result.retake")
             } else {
                 Button {
                     dismiss()

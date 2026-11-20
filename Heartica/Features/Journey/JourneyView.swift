@@ -20,6 +20,7 @@ struct JourneyView: View {
                                 chapterCard(chapter)
                             }
                             .buttonStyle(ScaleButtonStyle())
+                            .accessibilityIdentifier("journey.chapter.\(chapter.id)")
                             .disabled(!JourneyEngine.chapterActive(chapter, store: store) && !JourneyEngine.chapterCompleted(chapter, store: store))
                         }
                     }
@@ -55,7 +56,7 @@ struct JourneyView: View {
                     .foregroundStyle(Theme.textPrimary)
             }
             Spacer()
-            IconButton(systemName: "xmark", size: 38) { dismiss() }
+            IconButton(systemName: "xmark", size: 38, identifier: "journey.close") { dismiss() }
         }
         .padding(.top, 8)
     }
@@ -173,6 +174,7 @@ struct JourneyChapterView: View {
                             .background(Theme.surface)
                             .clipShape(Circle())
                     }
+                    .accessibilityIdentifier("journey.back")
                     Spacer()
                 }
                 VStack(alignment: .leading, spacing: 6) {
@@ -287,6 +289,7 @@ struct JourneyLevelView: View {
                             .background(Theme.surface)
                             .clipShape(Circle())
                     }
+                    .accessibilityIdentifier("journey.back")
                     Spacer()
                     Text("CHAPTER \(chapter.number) · LEVEL \(level.number)")
                         .font(.system(size: 9, weight: .bold, design: .rounded))

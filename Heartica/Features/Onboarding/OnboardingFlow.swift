@@ -29,6 +29,7 @@ struct OnboardingFlow: View {
                 case .permissions: permissionsView
                 }
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .transition(.asymmetric(insertion: .move(edge: .trailing).combined(with: .opacity),
                                      removal: .opacity))
         }
@@ -349,13 +350,13 @@ struct OnboardingFlow: View {
                     VStack(spacing: 12) {
                         PermissionCard(icon: "camera.fill", color: Theme.accent,
                                        title: "Camera", subtitle: "Measure your pulse with the camera and flash.",
-                                       isOn: $permissions.camera)
+                                       isOn: $permissions.camera, identifier: "onboarding.cameraToggle")
                         PermissionCard(icon: "bell.badge.fill", color: Theme.amber,
                                        title: "Notifications", subtitle: "Gentle reminders for your daily check-ins.",
-                                       isOn: $permissions.notifications)
+                                       isOn: $permissions.notifications, identifier: "onboarding.notificationToggle")
                         PermissionCard(icon: "heart.circle.fill", color: Theme.blue,
                                        title: "Apple Health", subtitle: "Bring in watch measurements and recovery data.",
-                                       isOn: $permissions.health)
+                                       isOn: $permissions.health, identifier: "onboarding.healthToggle")
                     }
 
                     Text("Permissions are requested only when you use each feature. Heartica does not access your photos.")
@@ -364,6 +365,7 @@ struct OnboardingFlow: View {
                 }
                 .padding(.horizontal, 24)
                 .padding(.top, 24)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
 
             Button {
@@ -565,6 +567,7 @@ private struct PermissionCard: View {
     var title: String
     var subtitle: String
     @Binding var isOn: Bool
+    var identifier: String? = nil
 
     var body: some View {
         HStack(spacing: 14) {
@@ -587,6 +590,7 @@ private struct PermissionCard: View {
             Toggle("", isOn: $isOn)
                 .labelsHidden()
                 .tint(color)
+                .accessibilityIdentifier(identifier ?? "onboarding.permissionToggle")
         }
         .padding(14)
         .background(Theme.surface)

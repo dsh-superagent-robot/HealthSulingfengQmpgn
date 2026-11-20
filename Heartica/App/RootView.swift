@@ -10,6 +10,7 @@ struct RootView: View {
     @State private var splashDone = UserDefaults.standard.bool(forKey: "skipSplash")
     @State private var didHandleLaunch = false
     @State private var showLatestMeasurement = false
+    @State private var showMetricDetailSheet = false
     @State private var showRemindersSheet = false
     @State private var showAchievementsSheet = false
     @State private var showArticleSheet = false
@@ -92,6 +93,13 @@ struct RootView: View {
                     .environmentObject(router)
             }
         }
+        .sheet(isPresented: $showMetricDetailSheet) {
+            NavigationStack {
+                MetricDetailView(metric: .healthIndex)
+                    .environmentObject(store)
+                    .environmentObject(router)
+            }
+        }
         .sheet(isPresented: $showLatestMeasurement) {
             NavigationStack {
                 if let latest = store.latestMeasurement {
@@ -139,6 +147,7 @@ struct RootView: View {
         if defaults.bool(forKey: "showAppleHealth") { router.showAppleHealth = true }
         if defaults.bool(forKey: "showMeasure") { router.showMeasure = true }
         if defaults.bool(forKey: "showLatestMeasurement") { showLatestMeasurement = true }
+        if defaults.bool(forKey: "showMetricDetail") { showMetricDetailSheet = true }
         if defaults.bool(forKey: "showReminders") { showRemindersSheet = true }
         if defaults.bool(forKey: "showAchievements") { showAchievementsSheet = true }
         if defaults.bool(forKey: "showArticle") { showArticleSheet = true }

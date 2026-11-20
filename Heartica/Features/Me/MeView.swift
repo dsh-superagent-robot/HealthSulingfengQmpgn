@@ -68,10 +68,10 @@ struct MeView: View {
             }
             Spacer()
             HStack(spacing: 9) {
-                IconButton(systemName: "calendar", size: 42) {
+                IconButton(systemName: "calendar", size: 42, identifier: "me.monthly") {
                     router.showMonthly = true
                 }
-                IconButton(systemName: "gearshape.fill", size: 42) {
+                IconButton(systemName: "gearshape.fill", size: 42, identifier: "me.settings") {
                     router.showSettings = true
                 }
             }
@@ -118,6 +118,7 @@ struct MeView: View {
             .overlay(RoundedRectangle(cornerRadius: 24, style: .continuous).strokeBorder(Theme.separator.opacity(0.7), lineWidth: 0.8))
         }
         .buttonStyle(ScaleButtonStyle())
+        .accessibilityIdentifier("me.profile")
     }
 
     private var statisticsHeader: some View {
@@ -373,6 +374,7 @@ struct MeView: View {
             .cardSurface(padding: 16)
         }
         .buttonStyle(ScaleButtonStyle())
+        .accessibilityIdentifier("me.achievements")
     }
 
     private var connectCard: some View {
@@ -403,6 +405,7 @@ struct MeView: View {
                 .cardSurface(padding: 14)
             }
             .buttonStyle(ScaleButtonStyle())
+            .accessibilityIdentifier("me.appleHealth")
         }
     }
 }
@@ -510,6 +513,7 @@ struct ProfileView: View {
                     .background(Theme.surface)
                     .clipShape(Circle())
             }
+            .accessibilityIdentifier("profile.close")
             Text("My Profile")
                 .font(.system(size: 20, weight: .bold, design: .rounded))
                 .foregroundStyle(Theme.textPrimary)

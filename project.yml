@@ -63,6 +63,7 @@ targets:
     scheme:
       testTargets:
         - HearticaTests
+        - HearticaUITests
       gatherCoverageData: false
   HearticaTests:
     type: bundle.unit-test
@@ -75,3 +76,15 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.silverdawn.frostyhill.myst.tests
         GENERATE_INFOPLIST_FILE: YES
+  HearticaUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: HearticaUITests
+    dependencies:
+      - target: Heartica
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.silverdawn.frostyhill.myst.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Heartica

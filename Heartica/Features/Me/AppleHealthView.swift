@@ -45,6 +45,7 @@ struct AppleHealthView: View {
                     .background(Theme.surface)
                     .clipShape(Circle())
             }
+            .accessibilityIdentifier("applehealth.close")
             VStack(alignment: .leading, spacing: 1) {
                 Text("Apple Health")
                     .font(.system(size: 20, weight: .bold, design: .rounded))

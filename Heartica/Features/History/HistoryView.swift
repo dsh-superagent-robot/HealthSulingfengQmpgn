@@ -91,6 +91,7 @@ struct HistoryView: View {
                     .background(Theme.surface)
                     .clipShape(Circle())
             }
+            .accessibilityIdentifier("history.close")
             VStack(alignment: .leading, spacing: 1) {
                 Text("History")
                     .font(.system(size: 20, weight: .bold, design: .rounded))
@@ -123,6 +124,7 @@ struct HistoryView: View {
                     .background(Theme.accent)
                     .clipShape(Circle())
             }
+            .accessibilityIdentifier("history.add")
         }
     }
 

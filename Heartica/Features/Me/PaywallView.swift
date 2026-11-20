@@ -74,6 +74,7 @@ struct PaywallView: View {
                     .background(.white.opacity(0.1))
                     .clipShape(Circle())
             }
+            .accessibilityIdentifier("paywall.close")
             Spacer()
             Text("HEARTICA PREMIUM")
                 .font(.system(size: 9, weight: .bold, design: .rounded))
@@ -229,6 +230,7 @@ struct PaywallView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
             }
             .buttonStyle(ScaleButtonStyle())
+            .accessibilityIdentifier("paywall.purchase")
             HStack(spacing: 14) {
                 Button("Restore") {
                     if store.isPremium {

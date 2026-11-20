@@ -43,11 +43,13 @@ struct SettingsView: View {
                     } label: {
                         settingsRow(icon: "bell.badge.fill", color: Theme.amber, title: "Manage Reminders", value: "\(store.reminders.count)")
                     }
+                    .accessibilityIdentifier("settings.reminders")
                     NavigationLink {
                         AppleHealthView().environmentObject(store).environmentObject(router)
                     } label: {
                         settingsRow(icon: "heart.circle.fill", color: Theme.blue, title: "Apple Health", value: store.appleHealthConnected ? "Connected" : "Off")
                     }
+                    .accessibilityIdentifier("settings.appleHealth")
                 }
                 section(title: "Legal") {
                     Button {
@@ -159,6 +161,7 @@ struct SettingsView: View {
                     .background(Theme.surface)
                     .clipShape(Circle())
             }
+            .accessibilityIdentifier("settings.close")
             VStack(alignment: .leading, spacing: 1) {
                 Text("Settings")
                     .font(.system(size: 20, weight: .bold, design: .rounded))

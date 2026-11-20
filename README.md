@@ -34,13 +34,26 @@ xcrun simctl launch booted com.silverdawn.frostyhill.myst
 `project.yml` is the source of truth for targets, Info.plist keys, bundle identifier,
 orientation and deployment target. Regenerate after changing it.
 
-### Unit tests
+### Tests
 
 ```bash
+# Unit tests
 xcodebuild test -project Heartica.xcodeproj -scheme Heartica \
   -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
-  -derivedDataPath .build CODE_SIGNING_ALLOWED=NO
+  -derivedDataPath .build \
+  -only-testing:HearticaTests CODE_SIGNING_ALLOWED=NO
+
+# UI smoke suite
+xcodebuild test -project Heartica.xcodeproj -scheme Heartica \
+  -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
+  -derivedDataPath .build \
+  -only-testing:HearticaUITests CODE_SIGNING_ALLOWED=NO
 ```
+
+The UI suite covers onboarding + post-onboarding, seeded and empty states,
+main tabs, dashboard metric details, article reader, journey, history,
+pressure logging, settings, reminders, Apple Health, paywall purchase,
+premium monthly overview and the full measurement flow.
 
 ### Demo launch arguments
 
@@ -52,14 +65,16 @@ fast feature tour, these launch arguments are available:
 | `-resetData YES` | Delete the local store before launch |
 | `-seedDemo YES` | Seed three weeks of sample measurements and logs when empty |
 | `-seedPremium YES` | Mark the demo account as Premium |
-| `-onboardingCompleted YES` | Skip pre-onboarding |
-| `-postOnboardingCompleted YES` | Skip post-onboarding |
+| `-onboardingCompleted YES` | Skip pre-onboarding (read-only override) |
+| `-postOnboardingCompleted YES` | Skip post-onboarding (read-only override) |
+| `-resetOnboarding YES` | Clear the persisted onboarding flags before launch |
 | `-skipSplash YES` | Skip the splash animation |
 | `-initialTab home\|dashboard\|insights\|me` | Open a tab |
 | `-showMeasure YES` | Open the measurement flow |
 | `-showLatestMeasurement YES` | Open the newest measurement detail |
 | `-showHistory YES`, `-showJourney YES`, `-showSettings YES` | Open a feature |
 | `-showMonthly YES`, `-showAppleHealth YES`, `-showPaywall YES` | Open a feature |
+| `-showMetricDetail YES` | Open the Health Index detail sheet |
 | `-appearanceMode system\|light\|dark` | Override appearance |
 
 Example:
@@ -125,11 +140,16 @@ Heartica/
 - `HearticaTests` covers threshold tables, derived metrics, glucose conversion,
   catalog sizes (10/83 articles, 12/100/500 journey, 21 achievements), persistence
   round-trip, sample data, sequential journey unlock and article progress.
+- `HearticaUITests` is a 7-test smoke suite run on the simulator. It caught and
+  now guards a real crash: opening a dashboard metric detail constructed
+  `DashboardView` just to compute chart points, which triggered
+  `EnvironmentObject.error()` because the temporary view had no `AppStore`.
+  Metric series now live in `MetricSeries` and take the store explicitly.
 - Screenshots from the running app are in [`Screenshots/`](Screenshots):
-  onboarding, post-onboarding, home, home (dark), dashboard, insights, article
-  reader, journey, history, settings, reminders, achievements, paywall, monthly
-  overview, measurement flow, measurement result, measurement detail and
-  Apple Health.
+  onboarding, post-onboarding, home, home (dark), dashboard, health-index detail,
+  insights, article reader, journey, history, settings, reminders, achievements,
+  paywall, monthly overview, measurement flow, measurement result, measurement
+  detail and Apple Health.
 
 ## Deliberate limitations
 

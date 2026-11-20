@@ -115,6 +115,16 @@ final class HearticaTests: XCTestCase {
         XCTAssertEqual(AchievementEngine.value(for: achievement!, store: store), 1)
     }
 
+    func testMetricSeriesWorksWithEmptyAndSeededStores() {
+        let empty = makeStore()
+        XCTAssertTrue(MetricSeries.points(for: .healthIndex, days: 14, store: empty).isEmpty)
+        XCTAssertTrue(MetricSeries.points(for: .csi, days: 14, store: empty).isEmpty)
+
+        let seeded = makeStore(seed: true)
+        XCTAssertFalse(MetricSeries.points(for: .healthIndex, days: 14, store: seeded).isEmpty)
+        XCTAssertFalse(MetricSeries.points(for: .csi, days: 14, store: seeded).isEmpty)
+    }
+
     func testHealthStatusForPressureOxygenAndGlucose() {
         XCTAssertEqual(HealthEvaluator.pressure(sys: 115, dia: 75).label, "Normal")
         XCTAssertEqual(HealthEvaluator.pressure(sys: 150, dia: 95).label, "Very High")

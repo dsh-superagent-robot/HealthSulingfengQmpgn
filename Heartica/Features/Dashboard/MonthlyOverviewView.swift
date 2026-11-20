@@ -68,7 +68,7 @@ struct MonthlyOverviewView: View {
                         .background(Theme.surface)
                         .clipShape(Circle())
                 }
-                IconButton(systemName: "xmark", size: 36) { dismiss() }
+                IconButton(systemName: "xmark", size: 36, identifier: "monthly.close") { dismiss() }
             }
         }
         .padding(.horizontal, 20)

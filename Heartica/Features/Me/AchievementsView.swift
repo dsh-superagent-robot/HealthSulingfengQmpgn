@@ -38,6 +38,7 @@ struct AchievementsOverviewView: View {
                     .background(Theme.surface)
                     .clipShape(Circle())
             }
+            .accessibilityIdentifier("achievements.close")
             VStack(alignment: .leading, spacing: 1) {
                 Text("Achievements")
                     .font(.system(size: 20, weight: .bold, design: .rounded))

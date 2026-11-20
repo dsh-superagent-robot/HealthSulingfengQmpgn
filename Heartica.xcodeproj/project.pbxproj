@@ -26,6 +26,7 @@
 		7988496B44098E80DC0A88CC /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710F71349FB75BA6FD2FF9C2 /* PaywallView.swift */; };
 		7E14F8AD063134706E08C486 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED948C483E785BE84A432E8B /* AppStore.swift */; };
 		840433C83860CB606F5C1946 /* MeasureFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B3DC61681F9282EBBEF09A /* MeasureFlowView.swift */; };
+		8C27D44F3D4D044B173338F1 /* SmokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E6014E1F9AC1E77C0D5370 /* SmokeUITests.swift */; };
 		9CD5A1FA3B47CB45058F758D /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = F018146669340026C57FCBDA /* Components.swift */; };
 		9ECC702F07EBFEB47A60111C /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053C51D877D7C0A0D42D243 /* RemindersView.swift */; };
 		A04F65807CB8CECC2237F021 /* PPGCameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A706A6D0A50B829CF39E5AB /* PPGCameraService.swift */; };
@@ -50,9 +51,17 @@
 			remoteGlobalIDString = 466CBAB8C56A49EE6637E9AB;
 			remoteInfo = Heartica;
 		};
+		E6A692A9C2F1031BBE1D38F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE14C83ED3BCE4452AAF3D62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 466CBAB8C56A49EE6637E9AB;
+			remoteInfo = Heartica;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00E6014E1F9AC1E77C0D5370 /* SmokeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeUITests.swift; sourceTree = "<group>"; };
 		02B3DC61681F9282EBBEF09A /* MeasureFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureFlowView.swift; sourceTree = "<group>"; };
 		052AC19A11D0DC99B83EB378 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		0D2BC77AB8902D2FD5A61FBA /* HealthEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthEngine.swift; sourceTree = "<group>"; };
@@ -77,6 +86,7 @@
 		AEE3A9D44B0AF2330E469499 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		B065C8EEF0C0ED40328014A9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		B0920F15FB8718FACAA7EA20 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		B1BB44B340666A53DA17844A /* HearticaUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HearticaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A224303A01605A114BA0F1 /* ManualLogViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualLogViews.swift; sourceTree = "<group>"; };
 		B8D1601838C07C3CFC7B47B0 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		C69C3E87E6D1A103BFD65001 /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsView.swift; sourceTree = "<group>"; };
@@ -133,6 +143,7 @@
 			children = (
 				54B8E93D7B1DA720133C86DE /* Heartica.app */,
 				FEA2D89CCF68E0B5134C3699 /* HearticaTests.xctest */,
+				B1BB44B340666A53DA17844A /* HearticaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,6 +226,14 @@
 			path = History;
 			sourceTree = "<group>";
 		};
+		BF86C3FB0A6468B3961BC285 /* HearticaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				00E6014E1F9AC1E77C0D5370 /* SmokeUITests.swift */,
+			);
+			path = HearticaUITests;
+			sourceTree = "<group>";
+		};
 		D1B7789D8502DC113D128233 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +256,7 @@
 			children = (
 				9BEBC66C6857D7BDEA2F3F1A /* Heartica */,
 				522ECE73E15B808D612AA81B /* HearticaTests */,
+				BF86C3FB0A6468B3961BC285 /* HearticaUITests */,
 				1F9E19F49BAAB33D6B78159B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -309,6 +329,24 @@
 			productReference = FEA2D89CCF68E0B5134C3699 /* HearticaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A5E5B9BD18B813564D5840CF /* HearticaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3092673D749AE248254A7526 /* Build configuration list for PBXNativeTarget "HearticaUITests" */;
+			buildPhases = (
+				705E6138A04094D7E410E4F4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1136B6578382E2A71CA2914D /* PBXTargetDependency */,
+			);
+			name = HearticaUITests;
+			packageProductDependencies = (
+			);
+			productName = HearticaUITests;
+			productReference = B1BB44B340666A53DA17844A /* HearticaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -325,6 +363,11 @@
 					95D798B425860AB0FB9C8F1D = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
+					};
+					A5E5B9BD18B813564D5840CF = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 466CBAB8C56A49EE6637E9AB;
 					};
 				};
 			};
@@ -344,6 +387,7 @@
 			targets = (
 				466CBAB8C56A49EE6637E9AB /* Heartica */,
 				95D798B425860AB0FB9C8F1D /* HearticaTests */,
+				A5E5B9BD18B813564D5840CF /* HearticaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -360,6 +404,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		705E6138A04094D7E410E4F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C27D44F3D4D044B173338F1 /* SmokeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F78A2D4B8C61DF3C89E0037 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,6 +461,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1136B6578382E2A71CA2914D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 466CBAB8C56A49EE6637E9AB /* Heartica */;
+			targetProxy = E6A692A9C2F1031BBE1D38F6 /* PBXContainerItemProxy */;
+		};
 		1292DDF79A9D0CA5E3843FDE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 466CBAB8C56A49EE6637E9AB /* Heartica */;
@@ -417,6 +474,23 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		137D6021D43FF1AC2E33F683 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverdawn.frostyhill.myst.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Heartica;
+			};
+			name = Debug;
+		};
 		4AF043300ADF559729A49DD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -611,6 +685,23 @@
 			};
 			name = Release;
 		};
+		DC2986F76192C80A487AF5CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.silverdawn.frostyhill.myst.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Heartica;
+			};
+			name = Release;
+		};
 		E097D055B8C69A963122FFF9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -654,6 +745,15 @@
 			buildConfigurations = (
 				4C22E3809E95DE9D66C4E91E /* Debug */,
 				51E4FA00925B166FAA17D031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3092673D749AE248254A7526 /* Build configuration list for PBXNativeTarget "HearticaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				137D6021D43FF1AC2E33F683 /* Debug */,
+				DC2986F76192C80A487AF5CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

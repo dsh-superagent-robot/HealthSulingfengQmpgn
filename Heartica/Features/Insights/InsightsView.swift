@@ -77,6 +77,7 @@ struct InsightsView: View {
                             PopularArticleCard(article: article, isRead: store.isArticleRead(article.id))
                         }
                         .buttonStyle(ScaleButtonStyle())
+                        .accessibilityIdentifier("popular.\(article.id)")
                     }
                 }
             }
@@ -105,6 +106,7 @@ struct InsightsView: View {
                                 CompactArticleCard(article: article, isRead: store.isArticleRead(article.id))
                             }
                             .buttonStyle(ScaleButtonStyle())
+                            .accessibilityIdentifier("category.\(article.id)")
                         }
                     }
                 }
@@ -118,6 +120,7 @@ struct InsightsView: View {
                             ArticleRow(article: article, isRead: store.isArticleRead(article.id))
                         }
                         .buttonStyle(ScaleButtonStyle())
+                        .accessibilityIdentifier("row.\(article.id)")
                     }
                 }
             }
@@ -392,6 +395,7 @@ struct ArticleReaderView: View {
                         .background(.white.opacity(0.16))
                         .clipShape(Circle())
                 }
+                .accessibilityIdentifier("article.close")
                 Text(article.categoryID.replacingOccurrences(of: "-", with: " ").uppercased())
                     .font(.system(size: 9, weight: .bold, design: .rounded))
                     .tracking(1.3)

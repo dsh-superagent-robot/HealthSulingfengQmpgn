@@ -50,6 +50,17 @@
                ReferencedContainer = "container:Heartica.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A5E5B9BD18B813564D5840CF"
+               BuildableName = "HearticaUITests.xctest"
+               BlueprintName = "HearticaUITests"
+               ReferencedContainer = "container:Heartica.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <CommandLineArguments>
       </CommandLineArguments>

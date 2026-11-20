@@ -88,6 +88,7 @@ struct RemindersView: View {
                     .background(Theme.surface)
                     .clipShape(Circle())
             }
+            .accessibilityIdentifier("reminders.close")
             VStack(alignment: .leading, spacing: 1) {
                 Text("Daily Reminders")
                     .font(.system(size: 20, weight: .bold, design: .rounded))

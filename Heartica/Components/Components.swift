@@ -9,6 +9,7 @@ struct IconButton: View {
     var foreground: Color = Theme.textPrimary
     var background: Color = Theme.surface
     var size: CGFloat = 42
+    var identifier: String? = nil
     var action: () -> Void
 
     var body: some View {
@@ -22,6 +23,7 @@ struct IconButton: View {
                 .overlay(Circle().strokeBorder(Theme.separator.opacity(0.7), lineWidth: 0.8))
         }
         .buttonStyle(ScaleButtonStyle())
+        .accessibilityIdentifier(identifier ?? "icon.\(systemName)")
     }
 }
 
@@ -70,7 +72,15 @@ struct ScreenHeader: View {
 struct SectionHeading: View {
     var title: String
     var actionTitle: String?
+    var actionIdentifier: String?
     var action: (() -> Void)?
+
+    init(title: String, actionTitle: String? = nil, actionIdentifier: String? = nil, action: (() -> Void)? = nil) {
+        self.title = title
+        self.actionTitle = actionTitle
+        self.actionIdentifier = actionIdentifier
+        self.action = action
+    }
 
     var body: some View {
         HStack(alignment: .firstTextBaseline) {
@@ -84,6 +94,7 @@ struct SectionHeading: View {
                         .font(.system(size: 13, weight: .semibold, design: .rounded))
                         .foregroundStyle(Theme.accent)
                 }
+                .accessibilityIdentifier(actionIdentifier ?? "section.\(title)")
             }
         }
     }
@@ -446,6 +457,7 @@ struct MainTabBar: View {
                 .offset(y: -25)
             }
             .buttonStyle(ScaleButtonStyle())
+            .accessibilityIdentifier("tab.measure")
         }
     }
 
@@ -465,6 +477,7 @@ struct MainTabBar: View {
             .frame(maxWidth: .infinity)
         }
         .buttonStyle(.plain)
+        .accessibilityIdentifier("tab.\(tab.rawValue)")
     }
 }
 

@@ -63,7 +63,7 @@ struct DashboardView: View {
                     .foregroundStyle(Theme.textSecondary)
             }
             Spacer()
-            IconButton(systemName: "slider.horizontal.3", size: 42) {
+            IconButton(systemName: "slider.horizontal.3", size: 42, identifier: "dashboard.chartSettings") {
                 showGraphSettings = true
             }
         }
@@ -118,7 +118,7 @@ struct DashboardView: View {
     private func dashboardCard(_ metric: Metric) -> some View {
         let latestValue = latestValue(metric)
         let status = statusFor(metric: metric, value: latestValue)
-        let points = points(for: metric, days: 14)
+        let points = MetricSeries.points(for: metric, days: 14, store: store)
         return Button {
             selectedMetric = metric
         } label: {
@@ -164,6 +164,7 @@ struct DashboardView: View {
             .cardSurface(padding: 13, radius: 20)
         }
         .buttonStyle(ScaleButtonStyle())
+        .accessibilityIdentifier("dashboard.metric.\(metric.rawValue)")
     }
 
     private var energyStressCard: some View {
@@ -215,6 +216,7 @@ struct DashboardView: View {
             .cardSurface(padding: 13, radius: 20)
         }
         .buttonStyle(ScaleButtonStyle())
+        .accessibilityIdentifier("dashboard.energyStress")
     }
 
     private var csiCard: some View {
@@ -290,6 +292,7 @@ struct DashboardView: View {
             .cardSurface(padding: 16)
         }
         .buttonStyle(ScaleButtonStyle())
+        .accessibilityIdentifier("dashboard.csi")
     }
 
     private var csiDays: Int {
@@ -361,6 +364,7 @@ struct DashboardView: View {
             .cardSurface(padding: 16)
         }
         .buttonStyle(ScaleButtonStyle())
+        .accessibilityIdentifier("dashboard.heartAge")
     }
 
     private var monthlyCard: some View {
@@ -392,6 +396,7 @@ struct DashboardView: View {
             .cardSurface(padding: 16)
         }
         .buttonStyle(ScaleButtonStyle())
+        .accessibilityIdentifier("dashboard.monthly")
     }
 
     // MARK: Data
@@ -432,7 +437,13 @@ struct DashboardView: View {
         }
     }
 
-    func points(for metric: Metric, days: Int) -> [MetricPoint] {
+}
+
+/// Pure series builder shared by Dashboard, metric details and chart settings.
+/// Keeping it outside `DashboardView` avoids constructing a view (and touching
+/// its `@EnvironmentObject`s) just to turn measurements into chart points.
+enum MetricSeries {
+    static func points(for metric: Metric, days: Int, store: AppStore) -> [MetricPoint] {
         let cal = Calendar.current
         guard let start = cal.date(byAdding: .day, value: -days + 1, to: cal.startOfDay(for: Date())) else { return [] }
         var raw: [(Date, Double)] = []
@@ -583,6 +594,7 @@ struct MetricDetailView: View {
                     .background(Theme.surface)
                     .clipShape(Circle())
             }
+            .accessibilityIdentifier("metric.close")
             VStack(alignment: .leading, spacing: 1) {
                 Text(metric.title)
                     .font(.system(size: 20, weight: .bold, design: .rounded))
@@ -592,7 +604,7 @@ struct MetricDetailView: View {
                     .foregroundStyle(Theme.textSecondary)
             }
             Spacer()
-            IconButton(systemName: "slider.horizontal.3", size: 36) { showSettings = true }
+            IconButton(systemName: "slider.horizontal.3", size: 36, identifier: "metric.settings") { showSettings = true }
         }
     }
 
@@ -714,8 +726,7 @@ struct MetricDetailView: View {
     }
 
     private var points: [MetricPoint] {
-        let dashboard = DashboardView()
-        return dashboard.points(for: metric, days: period.days)
+        MetricSeries.points(for: metric, days: period.days, store: store)
     }
 
     private func statusFor(_ value: Double) -> HealthStatus {
@@ -871,8 +882,7 @@ struct GraphSettingsView: View {
 
     private var preview: some View {
         let chosenMetric = metric ?? .healthIndex
-        let dashboard = DashboardView()
-        let points = dashboard.points(for: chosenMetric, days: 14)
+        let points = MetricSeries.points(for: chosenMetric, days: 14, store: store)
         return VStack(alignment: .leading, spacing: 8) {
             Text("Preview")
                 .font(.system(size: 13, weight: .bold, design: .rounded))

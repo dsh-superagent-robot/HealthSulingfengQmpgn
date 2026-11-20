@@ -88,7 +88,7 @@ struct HomeView: View {
                     AvatarView(profile: store.profile, size: 42)
                 }
                 .buttonStyle(ScaleButtonStyle())
-                IconButton(systemName: "gearshape.fill", size: 42) {
+                IconButton(systemName: "gearshape.fill", size: 42, identifier: "home.settings") {
                     router.showSettings = true
                 }
             }
@@ -265,7 +265,7 @@ struct HomeView: View {
 
     private var measurementsSection: some View {
         VStack(spacing: 12) {
-            SectionHeading(title: "Measurements", actionTitle: "History") {
+            SectionHeading(title: "Measurements", actionTitle: "History", actionIdentifier: "home.history") {
                 router.showHistory = true
             }
             heartRateCard
@@ -353,6 +353,7 @@ struct HomeView: View {
                             .foregroundStyle(Theme.accent)
                     }
                 }
+                .accessibilityIdentifier("home.heart.actions")
             } else {
                 HStack(spacing: 14) {
                     ZStack {
@@ -589,6 +590,7 @@ struct HomeView: View {
             .overlay(RoundedRectangle(cornerRadius: 22, style: .continuous).strokeBorder(Theme.separator.opacity(0.7), lineWidth: 0.8))
         }
         .buttonStyle(ScaleButtonStyle())
+        .accessibilityIdentifier("home.journey")
     }
 
     private var proBanner: some View {
@@ -624,6 +626,7 @@ struct HomeView: View {
             .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
         }
         .buttonStyle(ScaleButtonStyle())
+        .accessibilityIdentifier("home.premium")
     }
 }
 
